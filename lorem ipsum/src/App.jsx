@@ -13,8 +13,11 @@ const App = () => {
   };
 
   return (
+
     <section className="section-center" onSubmit={handleSubmit}>
+
       <h4>tired of boring lorem ipsum?</h4>
+
       <form className="lorem-form">
         <label htmlFor="amount">paragraphs:</label>
         <input
@@ -31,6 +34,7 @@ const App = () => {
           generate
         </button>
       </form>
+
       <article className="lorem-text">
         {text.map((item, index) => {
           return (
@@ -41,4 +45,5 @@ const App = () => {
     </section>
   );
 };
+
 export default App;
