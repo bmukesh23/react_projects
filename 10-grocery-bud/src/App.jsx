@@ -15,10 +15,12 @@ const App = () => {
     setItems([...items, newItem]);
   }
 
+  const removeItem = (itemId) => { }
+
   return (
     <section className="section-center">
       <Form addItem={addItem} />
-      <Items/>
+      <Items items={items} removeItem={removeItem} />
     </section>
   );
 };

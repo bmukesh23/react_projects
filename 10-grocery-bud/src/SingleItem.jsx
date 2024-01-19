@@ -1,6 +1,6 @@
-const SingleItem = () => {
+const SingleItem = ({item, removeItem}) => {
   return (
-    <div>SingleItem</div>
+    <h2>SingleItem</h2>
   )
 }
 export default SingleItem
