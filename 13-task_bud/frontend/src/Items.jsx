@@ -3,7 +3,7 @@ import SingleItem from './SingleItem';
 import customFetch from './utils';
 
 const Items = () => {
-  const { isLoading, data } = useQuery({
+  const { isLoading, isError, data, error } = useQuery({
     queryKey: ['tasks'],
     queryFn: () => customFetch.get('/'),
   });
@@ -11,6 +11,14 @@ const Items = () => {
   if (isLoading) {
     return <p style={{ marginTop: '1rem' }}>Loading...</p>
   }
+
+  if (isError) {
+    return <p style={{ marginTop: '1rem' }}>There is an Error</p>
+  }
+
+  // if (error) {
+  //   return <p style={{ marginTop: '1rem' }}>{error.message}</p>
+  // }
 
   return (
     <div className='items'>
